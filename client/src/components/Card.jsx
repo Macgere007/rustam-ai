@@ -2,6 +2,10 @@ import React from 'react';
 
 import { download } from '../assets';
 import { downloadImage } from '../utils';
+import {
+  WhatsappShareButton,
+ WhatsappIcon
+} from "react-share";
 
 const Card = ({ _id, name, prompt, photo }) => (
   <div className="rounded-xl group relative shadow-card hover:shadow-cardhover card">
@@ -19,8 +23,11 @@ const Card = ({ _id, name, prompt, photo }) => (
           <p className="text-white text-sm">{name}</p>
         </div>
         <button type="button" onClick={() => downloadImage(_id, photo)} className="outline-none bg-transparent border-none">
-          <img src={download} alt="download" className="w-6 h-6 object-contain invert" />
+          <img src={download} alt="download" className="w-6 h-6 object-contain invert ml-100" />
         </button>
+        <WhatsappShareButton url={photo}>
+         <WhatsappIcon size={32}/>
+        </WhatsappShareButton>
       </div>
     </div>
   </div>
