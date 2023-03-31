@@ -4,7 +4,7 @@ import { download } from '../assets';
 import { downloadImage } from '../utils';
 import {
   WhatsappShareButton,
- WhatsappIcon
+  WhatsappIcon
 } from "react-share";
 
 const Card = ({ _id, name, prompt, photo }) => (
@@ -22,12 +22,14 @@ const Card = ({ _id, name, prompt, photo }) => (
           <div className="w-7 h-7 rounded-full object-cover bg-green-700 flex justify-center items-center text-white text-xs font-bold">{name[0]}</div>
           <p className="text-white text-sm">{name}</p>
         </div>
+       <div className="flex flex-row space-x-2">
+        <WhatsappShareButton url={photo}>
+         <WhatsappIcon size={32} round={true} />
+        </WhatsappShareButton>
         <button type="button" onClick={() => downloadImage(_id, photo)} className="outline-none bg-transparent border-none">
           <img src={download} alt="download" className="w-6 h-6 object-contain invert ml-100" />
         </button>
-        <WhatsappShareButton url={photo}>
-         <WhatsappIcon size={32}/>
-        </WhatsappShareButton>
+        </div>
       </div>
     </div>
   </div>
