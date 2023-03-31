@@ -90,7 +90,7 @@ const Home = () => {
                 Showing Results for: <span className='font-bold'>{searchText}</span>
               </h2>
             )}
-            <div className="grid sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3">
+            <div className="grid sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-1">
               {searchText ? (
                 <RenderCards
                   data={searchedResults}
