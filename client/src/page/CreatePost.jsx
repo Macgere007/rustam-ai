@@ -117,7 +117,7 @@ const CreatePost = () => {
               <img
                 src={preview}
                 alt="preview"
-                className="w-9/12 h-9/12 object-contain opacity-40"
+                className="w-11/12 h-11/12 object-contain opacity-60"
               />
             )}
 
